@@ -4,7 +4,9 @@ class SuperPrime {
   public:
   	SuperPrime():number(0) {
 	}
-  	~SuperPrime() {
+	SuperPrime(int n)::number(n){
+	}
+	~SuperPrime() {
 	}
   	bool isSuperPrime() {
   	  split();
