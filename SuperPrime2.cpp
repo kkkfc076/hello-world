@@ -2,16 +2,25 @@
 #include <iostream>
 class Prime {
   public:
-  	Prime():number(0) {
-	}
-  	Prime(int n):number(n) {
-	}
-	~Prime() {
-	}
-  	bool isPrime() { 
+  		Prime():number(0) {
+		}
+  		Prime(int n):number(n) {
+		}
+		~Prime() {
+		}
+  		bool isPrime()
+		{ 
+  			int i;
+  			for(i=2;i<number;i++)
+  			{
+  				if(number%i==0)
+  					break;
+			}
+			if(i!=number)
+				return false;
+			return true;		
   	  //2到number-1的因子 
-  	  return false;
-	}
+		}
   private:
   	const int number;
 }; 
@@ -51,8 +60,6 @@ class SuperPrime {
   	}
   	SuperPrime(int n):number(n), pset(3) {
   	  split();  //它就是构造对象 
-	}
-	SuperPrime(int n)::number(n){
 	}
 	~SuperPrime() {
 	}
