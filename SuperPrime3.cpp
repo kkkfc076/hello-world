@@ -63,6 +63,7 @@ template <class T>
 Set<T>::~Set() {
   delete[] pset;  //ªÿ ’ 
 }
+
 template <class T>
 bool Set<T>::add(T *bp) {
 	if(index > size) return false;
