@@ -14,6 +14,7 @@ class Prime {
   private:
   	const int number;
 }; 
+
 class PrimeSet {
   public:
   	PrimeSet(int size) {
