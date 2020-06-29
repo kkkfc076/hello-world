@@ -63,9 +63,18 @@ template <class T>
 Set<T>::~Set() {
   delete[] pset;  //»ØÊÕ 
 }
-
 template <class T>
 bool Set<T>::add(T *bp) {
-  pset[index++] = bp;
-  return true;
+	if(index > size) return false;
+	pset[index] = bp;
+	index++;//pset[index++] = bp;
+	return true;
+}
+template <class T>
+bool Set<T>::remove(T *bp) {
+	if(index<0)
+		return false;
+	delete bp;
+	index--;
+	return true;
 }
